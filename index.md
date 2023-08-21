@@ -5,6 +5,8 @@ title: Student Blog
 
 ## Aliya's GitHub Page
 
+Hi I'm Aliya!
+
 Click to see my [Github account](https://github.com/aliyatang)!
 
 ![This is an image](https://media.discordapp.net/attachments/891206559055638579/1143067259531694090/Screen_Shot_2023-08-17_at_9.30.09_AM.png?width=2000&height=754)
