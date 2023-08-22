@@ -8,4 +8,5 @@ type: plans
 courses: { csse: {week: 0}, csp: {week: 0, categories: [4.A]}, csa: {week: 0} }
 categories: [C1.4]
 ---
-I love tools
+<h1 style="padding-left: 150px">I Love Tools!!</h1>
+<ul style="padding-left: 70px; padding-right: 80px"><b>GitHub</b>:</ul>
