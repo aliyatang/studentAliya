@@ -11,6 +11,11 @@ categories: [C1.4]
 # I Love My Tools!
 Become one with your tools.  They could be more important than code, code, code.
 
+![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/toolsdrawing.png?raw=true)
+
+### Distributed Vesion Control
+![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/toolsdrawing.png?raw=true)
+
 
 - GitHub: Amazing collaboration features, making it super easy to work together. I find it super cool how we can work on the same project simultaneously, and how we can track changes, manage conflicts, merge contributions very easily.  
 
