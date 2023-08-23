@@ -181,7 +181,7 @@ const display = document.getElementById("display");
 let isError = false;
 
 function appendCharacter(character) {
-  if (isError && !isNaN(character)) { // Clear display only when a character button is pressed
+  if (isError && !isNaN(character)) { // Clear display only when a NUM button is pressed
     display.value = "";
     isError = false;
   }
