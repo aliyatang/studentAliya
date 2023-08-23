@@ -4,6 +4,7 @@ title: Student Blog
 ---
 
 ## Aliya's GitHub Page
+Hi, I'm Aliya and I'm a junior at Del Norte High School! I plan on studying computer science or data science in the future, so I'm excited to see what another year of code code code has to bring us. Outside of academics, I like to cook, paint, and spend time with friends and family. 
 
 Click to see my [Github account](https://github.com/aliyatang)!
 

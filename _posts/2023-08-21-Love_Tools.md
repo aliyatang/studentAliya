@@ -4,9 +4,8 @@ comments: true
 layout: post
 title: I Love My Tools!
 description: Become one with your tools.  They could be more important than code, code, code.
-type: plans
-courses: { csse: {week: 0}, csp: {week: 0, categories: [4.A]}, csa: {week: 0} }
-categories: [C1.4]
+type: hacks
+courses: { csa: {week: 0} }
 ---
 # I Love My Tools!
 Become one with your tools.  They could be more important than code, code, code.
