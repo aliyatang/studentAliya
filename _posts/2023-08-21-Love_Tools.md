@@ -11,7 +11,7 @@ categories: [C1.4]
 # I Love My Tools!
 Become one with your tools.  They could be more important than code, code, code.
 
-![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/toolsdrawing.png?raw=true)
+![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/Tools%20Drawing%20CSA.png?raw=true)
 
 ### Distributed Vesion Control
 ![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/toolsdrawing.png?raw=true)
