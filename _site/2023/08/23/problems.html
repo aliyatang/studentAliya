@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Problems and Fixes! | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Problems and Fixes!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation and solutions to problems I run into." />
+<meta property="og:description" content="Documentation and solutions to problems I run into." />
+<link rel="canonical" href="http://0.0.0.0:4200/2023/08/23/problems.html" />
+<meta property="og:url" content="http://0.0.0.0:4200/2023/08/23/problems.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-23T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Problems and Fixes!" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4200/2023/08/23/problems.html","headline":"Problems and Fixes!","dateModified":"2023-08-23T00:00:00-07:00","datePublished":"2023-08-23T00:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4200/2023/08/23/problems.html"},"description":"Documentation and solutions to problems I run into.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style.css?v=1bb53cbd71e2f56266619a871eeed902ebfbf24b">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/scale.fix.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="./">Home</a></li>
+
+        <li class="fork"><a href="./csa">CSA</a></li>
+        <li class="fork"><a href="./blogs">Blogs</a></li>
+        <li class="title"><a href="https://github.com/aliyatang/studentAliya#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="problems-and-fixes">Problems and Fixes!</h1>
+<p>Documentation and solutions to problems I run into.</p>
+
+<h3 id="theme-not-showing-on-github-pages">Theme not Showing on Github Pages</h3>
+<p>A problem I ran into this week was my theme showing up on my local server not showing up on the github pages server. Instead, it was a totally unformatted page. I spent a while checking with my partner (because her theme was working) and trying fixes from online sources. However, I nothing seemed to work. When I checked the console, and it said the css file couldn’t be accessed… it turned out that in the html file the css file was trying to be accessed from the ROOT directory with the /assets… we must access it from the relative directory with assets…</p>
+
+<p><img src="https://media.discordapp.net/attachments/891206559055638579/1143958994298343607/Screen_Shot_2023-08-22_at_9.18.28_PM.jpg?width=1644&amp;height=884" alt="This is an image" /></p>
+
+<p>Error Msg:
+<img src="https://media.discordapp.net/attachments/891206559055638579/1143958994587754596/Screen_Shot_2023-08-22_at_9.18.33_PM.jpg?width=1644&amp;height=382" alt="This is an image" /></p>
+
+<p>Fixed:
+<img src="https://media.discordapp.net/attachments/891206559055638579/1143958995120427128/Screen_Shot_2023-08-23_at_10.15.35_AM.jpg?width=1644&amp;height=218" alt="This is an image" /></p>
+
+<p><img src="https://media.discordapp.net/attachments/891206559055638579/1143958994860392549/Screen_Shot_2023-08-23_at_10.14.40_AM.jpg?width=1446&amp;height=930" alt="This is an image" /></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="nighthawkcoders/"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/2023/08/23/problems.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
