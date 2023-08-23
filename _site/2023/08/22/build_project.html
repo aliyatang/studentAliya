@@ -66,119 +66,148 @@
     <h1 id="build-a-project">Build a Project</h1>
 <p>Continue learning the Development work flow for GitHub Pages index.md and _posts. Now is the time to build you first project.</p>
 
-<title>Binary Calculator</title>
+<p>Conventional Calculator</p>
+
+<html>
+<body>
+<div class="calculator">
+    <form>
+        <input type="text" id="display" name="display" disabled="" />
+        <div class="button-grid">
+            <input type="button" id="num" value="7" onclick="appendCharacter('7')" />
+            <input type="button" id="num" value="8" onclick="appendCharacter('8')" />
+            <input type="button" id="num" value="9" onclick="appendCharacter('9')" />
+            <input type="button" id="opp" value="/" onclick="appendCharacter('/')" class="operator" /> 
+            <input type="button" id="num" value="4" onclick="appendCharacter('4')" />
+            <input type="button" id="num" value="5" onclick="appendCharacter('5')" />
+            <input type="button" id="num" value="6" onclick="appendCharacter('6')" />
+            <input type="button" id="opp" value="*" onclick="appendCharacter('*')" class="operator" /> 
+            <input type="button" id="num" value="1" onclick="appendCharacter('1')" />
+            <input type="button" id="num" value="2" onclick="appendCharacter('2')" />
+            <input type="button" id="num" value="3" onclick="appendCharacter('3')" />
+            <input type="button" id="opp" value="-" onclick="appendCharacter('-')" class="operator" /> 
+            <input type="button" id="num" value="0" onclick="appendCharacter('0')" />
+            <input type="button" id="equal" value="=" onclick="evaluateExpression()" class="equal operator" />
+            <input type="button" id="opp" value="." onclick="appendCharacter('.')" class="operator" />
+            <input type="button" id="opp" value="+" onclick="appendCharacter('+')" class="operator" /> 
+            <input type="button" id="opp" value="AC" onclick="clearDisplay()" class="operator" />
+            <input type="button" id="opp" value="DEL" onclick="deleteLastCharacter()" class="operator" />
+            <input type="button" id="opp" value="(" onclick="appendCharacter('(')" class="operator" />
+            <input type="button" id="opp" value=")" onclick="appendCharacter(')')" class="operator" />
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  #calculator {
-    margin-top: 50px;
-  }
-  input[type="text"] {
-    width: 200px;
-    padding: 5px;
-  }
-  select {
-    padding: 5px;
-  }
-  button {
-    padding: 5px 10px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  background-color: #364757;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 240px;
+}
+
+#display {
+  width: 90%;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  margin-bottom:20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: #9fb7cc;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+#num {
+  width: 50px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #5c8cb8;
+  border-color: #4174a3;
+  color: white;
+  border: 10;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#opp {
+  width: 50px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #414a75;
+  border-color: #263266;
+  color: white;
+  border: 10;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#equal {
+  width: 50px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #68a392;
+  border-color: #569180;
+  color: white;
+  border: 10;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
 </style>
 
-<p>&lt;/head&gt;</p>
-<body>
-<h1>Binary Calculator</h1>
-<div id="calculator">
-  <input type="text" id="binary1" placeholder="Enter binary number" />
-  <select id="operator">
-    <option value="add">+</option>
-    <option value="subtract">-</option>
-    <option value="multiply">*</option>
-    <option value="divide">/</option>
-  </select>
-  <input type="text" id="binary2" placeholder="Enter binary number" />
-  <button id="calculate">Calculate</button>
-  <p id="result"></p>
-</div>
-
 <script>
-  const binary1Input = document.getElementById("binary1");
-  const binary2Input = document.getElementById("binary2");
-  const operatorSelect = document.getElementById("operator");
-  const calculateButton = document.getElementById("calculate");
-  const resultMessage = document.getElementById("result");
+const display = document.getElementById("display");
+let isError = false;
 
-  calculateButton.addEventListener("click", () => {
-    const binary1 = binary1Input.value;
-    const binary2 = binary2Input.value;
-    const operator = operatorSelect.value;
-
-    if (!isValidBinary(binary1) || !isValidBinary(binary2)) {
-      resultMessage.textContent = "Please enter valid binary numbers.";
-      return;
-    }
-
-    let result;
-    switch (operator) {
-      case "add":
-        result = addBinary(binary1, binary2);
-        break;
-      case "subtract":
-        result = subtractBinary(binary1, binary2);
-        break;
-      case "multiply":
-        result = multiplyBinary(binary1, binary2);
-        break;
-      case "divide":
-        result = divideBinary(binary1, binary2);
-        break;
-      default:
-        resultMessage.textContent = "Invalid operator selected.";
-        return;
-    }
-
-    resultMessage.textContent = `Result: ${result}`;
-  });
-
-  function isValidBinary(binary) {
-    return /^[01]+$/.test(binary);
+function appendCharacter(character) {
+  if (isError && !isNaN(character)) { // Clear display only when a character button is pressed
+    display.value = "";
+    isError = false;
   }
 
-  function addBinary(a, b) {
-    const num1 = parseInt(a, 2);
-    const num2 = parseInt(b, 2);
-    return (num1 + num2).toString(2);
-  }
+  display.value += character;
+}
 
-  function subtractBinary(a, b) {
-    const num1 = parseInt(a, 2);
-    const num2 = parseInt(b, 2);
-    return (num1 - num2).toString(2);
-  }
+function clearDisplay() {
+  display.value = "";
+  isError = false;
+}
 
-  function multiplyBinary(a, b) {
-    const num1 = parseInt(a, 2);
-    const num2 = parseInt(b, 2);
-    return (num1 * num2).toString(2);
-  }
+function deleteLastCharacter() {
+  display.value = display.value.toString().slice(0, -1);
+}
 
-  function divideBinary(a, b) {
-    const num1 = parseInt(a, 2);
-    const num2 = parseInt(b, 2);
-    if (num2 === 0) {
-      return "Cannot divide by zero.";
-    }
-    return (num1 / num2).toString(2);
+function evaluateExpression() {
+  try {
+    display.value = eval(display.value);
+    isError = false;
+  } catch (error) {
+    display.value = "Error";
+    isError = true;
   }
+}
 </script>
-</body>
-<p>&lt;/html&gt;</p>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
