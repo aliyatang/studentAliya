@@ -11,7 +11,7 @@ body {
     height: 100%;
     }
   body {
-    background: linear-gradient(white,#b8b8d1);
+    background: white;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -19,8 +19,10 @@ body {
     background-attachment: fixed;
   }
   canvas {
-    background: tan;
+    background: #abfc8b;
     text-align:center;
+    border: 8px;
+    border-color: black;
     padding-left: 0;
     padding-right: 0;
     top: 150px;
@@ -82,31 +84,12 @@ body {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
   }
-  h1 {
-    font-size: 40px;
-    padding:15px;
-  }
-  img {
-    padding: 15px;
-  }
-  h2 {
-    padding: 15px;
-    text-align: center;
-  }
-  h3, h4 {
-    padding: 15px;
-  }
-  table ul {
-    padding: 30px;
-  }
 </style>
 
 
 <div class="container">
-    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-        <p class="fs-4">Snake score: <span id="score_value">0</span></p>
-    </header>
     <div class="container bg-secondary" style="text-align:center;">
+    <p class="fs-4">Snake score: <span id="score_value">0</span></p>
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
             <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>

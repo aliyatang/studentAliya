@@ -23,7 +23,7 @@
 {"url":"http://0.0.0.0:4200/studentAliya/frontend/snake","headline":"Classic Snake Game","dateModified":"2022-07-08T00:00:00-07:00","datePublished":"2022-07-08T00:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4200/studentAliya/frontend/snake"},"description":"A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers.","@type":"BlogPosting","image":"http://0.0.0.0:4200/studentAliya/images/snake.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/studentAliya/assets/css/style.css?v=fa5afc2485040d1212cc4f9f3922dcffe26a980d">
+  <link rel="stylesheet" href="/studentAliya/assets/css/style.css?v=6cf6498bde82e91e185fa25fae3eb183dee0d99d">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/studentAliya/assets/js/scale.fix.js"></script>
@@ -49,9 +49,9 @@
   <div id="header">
     <nav>
       <ul>
-        <li class="fork"><a href="https://aliyatang.github.io/studentAliya/">Home</a></li>
-        <li class="fork"><a href="https://aliyatang.github.io/studentAliya/csa">CSA Lab Notebook</a></li>
-        <li class="fork"><a href="https://aliyatang.github.io/studentAliya/blogs">Blogs</a></li>
+        <li class="fork"><a href="/studentAliya/">Home</a></li>
+        <li class="fork"><a href="/studentAliya/csa">CSA Lab Notebook</a></li>
+        <li class="fork"><a href="/studentAliya/blogs">Blogs</a></li>
         <li class="title"><a href="https://github.com/aliyatang/studentAliya#readme">View On GitHub</a></li>
       </ul>
     </nav>
@@ -69,7 +69,7 @@ body {
     height: 100%;
     }
   body {
-    background: linear-gradient(white,#b8b8d1);
+    background: white;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -77,8 +77,10 @@ body {
     background-attachment: fixed;
   }
   canvas {
-    background: tan;
+    background: #abfc8b;
     text-align:center;
+    border: 8px;
+    border-color: black;
     padding-left: 0;
     padding-right: 0;
     top: 150px;
@@ -140,30 +142,11 @@ body {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
   }
-  h1 {
-    font-size: 40px;
-    padding:15px;
-  }
-  img {
-    padding: 15px;
-  }
-  h2 {
-    padding: 15px;
-    text-align: center;
-  }
-  h3, h4 {
-    padding: 15px;
-  }
-  table ul {
-    padding: 30px;
-  }
 </style>
 
 <div class="container">
-    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-        <p class="fs-4">Snake score: <span id="score_value">0</span></p>
-    </header>
     <div class="container bg-secondary" style="text-align:center;">
+    <p class="fs-4">Snake score: <span id="score_value">0</span></p>
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
             <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
