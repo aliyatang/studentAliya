@@ -10,15 +10,6 @@ Click to see my [Github account](https://github.com/aliyatang)!
 
 ![This is an image](https://github.com/aliyatang/studentAliya/blob/main/images/aliyadrawing.png?raw=true)
 
-| Period   | Class    | Teacher  |
-| -------- | -------- | -------- |
-| 1   | AP CSA      | Mr. Mortenson  |
-| 2   | AP Physics  | Mr. Liao       |
-| 3   | APEL        | Mrs. Darcey    |
-| 4   | AP Calc BC  | Mr. Bernabeo   |
-| 5   | Offroll     | N/A            |
-
-
 ## Hacks, Study and Tangibles
 Blogging in GitHub pages is a way to learn and code at the same time. 
 
