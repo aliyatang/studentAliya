@@ -4,6 +4,7 @@ description: A pretty advanced use of JavaScript building classic snake game usi
 permalink: /frontend/snake
 image: /images/snake.png
 categories: [C4.9]
+type: tangibles
 tags: [javascript]
 ---
 <style>
