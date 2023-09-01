@@ -4,25 +4,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Console Games | CompSci Blogs</title>
+<title>Console Games - RPS, Higher Lower, Tic-Tac-Toe | CompSci Blogs</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Console Games" />
-<meta name="author" content="Vunsh Mehta" />
+<meta property="og:title" content="Console Games - RPS, Higher Lower, Tic-Tac-Toe" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="These console games show many elements from College Board’s Units" />
-<meta property="og:description" content="These console games show many elements from College Board’s Units" />
+<meta name="description" content="Console games that show elements from College Board’s Units" />
+<meta property="og:description" content="Console games that show elements from College Board’s Units" />
 <link rel="canonical" href="http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html" />
 <meta property="og:url" content="http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html" />
 <meta property="og:site_name" content="CompSci Blogs" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-08-23T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Console Games" />
+<meta property="twitter:title" content="Console Games - RPS, Higher Lower, Tic-Tac-Toe" />
 <script type="application/ld+json">
-{"url":"http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html","headline":"Console Games","dateModified":"2023-08-23T00:00:00-07:00","datePublished":"2023-08-23T00:00:00-07:00","author":{"@type":"Person","name":"Vunsh Mehta"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html"},"description":"These console games show many elements from College Board’s Units","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html","headline":"Console Games - RPS, Higher Lower, Tic-Tac-Toe","dateModified":"2023-08-23T00:00:00-07:00","datePublished":"2023-08-23T00:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4200/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html"},"description":"Console games that show elements from College Board’s Units","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/studentAliya/assets/css/style.css?v=6cf6498bde82e91e185fa25fae3eb183dee0d99d">
+  <link rel="stylesheet" href="/studentAliya/assets/css/style.css?v=c768ad664bd74a506f7332da912d63b9ec2a929c">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/studentAliya/assets/js/scale.fix.js"></script>
@@ -63,389 +62,350 @@
 
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="java-kernel-for-jupyter-notebooks">Java Kernel for Jupyter Notebooks.</h2>
-<blockquote>
-  <p>[Install Java kernel readme}(https://github.com/SpencerPark/IJava).  Java will require an independent kernel in Jupyter Notebooks.  The instruction performed by the Teacher follows, but look to readme if you have troubles.</p>
-</blockquote>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>base<span class="o">)</span> <span class="nb">id</span>:~<span class="nv">$ </span>wget https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip  <span class="c"># download IJava kernel as zip</span>
-<span class="o">(</span>base<span class="o">)</span> <span class="nb">id</span>:~<span class="nv">$ </span>unzip ijava-1.3.0.zip <span class="c"># unzip downloaded IJava kernel</span>
-<span class="o">(</span>base<span class="o">)</span> <span class="nb">id</span>:~<span class="nv">$ </span>python install.py <span class="nt">--user</span> <span class="c"># install IJava kernel</span>
-<span class="o">(</span>base<span class="o">)</span> <span class="nb">id</span>:~<span class="nv">$ </span>jupyter kernelspec list <span class="c"># list kernels</span>
-Available kernels:
-  java          /home/shay/.local/share/jupyter/kernels/java
-  python3       /home/shay/.local/share/jupyter/kernels/python3
-</code></pre></div></div>
-
-<h3 id="console-game-menu">Console Game Menu</h3>
-<blockquote>
-  <p>College Boards Units #1, #3, and #4 and Free Response Methods and Control Structures are built into these labs.  Of course, these games are very popular in beginning programming.  They are here for reference, as they were shared by a student.</p>
-</blockquote>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span> <span class="c1">//library for user input</span>
-<span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="o">;</span> <span class="c1">//library for random numbers</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConsoleGame</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">DEFAULT</span> <span class="o">=</span> <span class="s">"\u001B[0m"</span><span class="o">;</span>  <span class="c1">// Default Terminal Color</span>
-    
-    <span class="kd">public</span> <span class="nf">ConsoleGame</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nc">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>  <span class="c1">// using Java Scanner Object</span>
-        
-        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="k">while</span> <span class="o">(!</span><span class="n">quit</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">menuString</span><span class="o">();</span>  <span class="c1">// print Menu</span>
-            <span class="k">try</span> <span class="o">{</span>
-                <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>  <span class="c1">// using method from Java Scanner Object</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">""</span> <span class="o">+</span> <span class="n">choice</span> <span class="o">+</span> <span class="s">": "</span><span class="o">);</span>
-                <span class="n">quit</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">action</span><span class="o">(</span><span class="n">choice</span><span class="o">);</span>  <span class="c1">// take action</span>
-            <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">sc</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span> <span class="c1">// error: clear buffer</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span> <span class="o">+</span> <span class="s">": Not a number, try again."</span><span class="o">);</span>
-            <span class="o">}</span>
-            
-        <span class="o">}</span>
-        <span class="n">sc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">menuString</span><span class="o">(){</span>
-        <span class="nc">String</span> <span class="n">menuText</span> <span class="o">=</span> <span class="s">"""
-                \u001B[35m___________________________   
-                |~~~~~~~~~~~~~~~~~~~~~~~~~|
-                |\u001B[0m          Menu!          \u001B[35m|
-                |~~~~~~~~~~~~~~~~~~~~~~~~~| 
-                | 0 - Exit                |      
-                | 1 - Rock Paper Scissors |
-                | 2 - Higher or Lower     |
-                | 3 - Tic Tac Toe         |
-                |_________________________|   \u001B[0m
-
-                Choose an option.
-                """</span><span class="o">;</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">menuText</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">action</span><span class="o">(</span><span class="kt">int</span> <span class="n">selection</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="k">switch</span> <span class="o">(</span><span class="n">selection</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">// Switch or Switch/Case is Control Flow statement and is used to evaluate the user selection</span>
-            <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Goodbye, World!"</span><span class="o">);</span> 
-                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> 
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-                <span class="n">rps</span><span class="o">();</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-                <span class="n">horl</span><span class="o">();</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
-                <span class="n">ticTacToe</span><span class="o">();</span>
-                <span class="k">break</span><span class="o">;</span>
-                    
-            <span class="k">default</span><span class="o">:</span>
-                <span class="c1">//Prints error message from console</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Unexpected choice, try again."</span><span class="o">);</span>
-        <span class="o">}</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="no">DEFAULT</span><span class="o">);</span>  <span class="c1">// make sure to reset color and provide new line</span>
-        <span class="k">return</span> <span class="n">quit</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">horl</span><span class="o">(){</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Higher or Lower"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You have three guesses to guess the number I am thinking of between 1-8."</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"If you guess the number correctly, you win!"</span><span class="o">);</span>
-        <span class="nc">Scanner</span> <span class="n">scHL</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">randomG</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">scHL</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--){</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">guess</span> <span class="o">==</span> <span class="n">randomG</span><span class="o">){</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You win!"</span><span class="o">);</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="o">}</span>
-            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">guess</span> <span class="o">&gt;</span> <span class="n">randomG</span><span class="o">){</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The number is lower"</span><span class="o">);</span>
-            <span class="o">}</span>
-            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">randomG</span><span class="o">){</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The number is higher"</span><span class="o">);</span>
-            <span class="o">}</span>
-            <span class="n">guess</span> <span class="o">=</span> <span class="n">scHL</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="o">}</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Game over."</span><span class="o">);</span>
-        <span class="n">scHL</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
-                                                     
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">rps</span><span class="o">(){</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Rock Paper Scissors"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Type r for rock, p for paper, or s for scissors"</span><span class="o">);</span>
-        <span class="nc">Scanner</span> <span class="n">scRPS</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
-        <span class="nc">String</span> <span class="n">userChoice</span> <span class="o">=</span> <span class="n">scRPS</span><span class="o">.</span><span class="na">nextLine</span><span class="o">().</span><span class="na">toLowerCase</span><span class="o">();</span>
-        <span class="nc">Boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">3</span><span class="o">);</span>
-        <span class="k">while</span><span class="o">(</span><span class="n">quit</span> <span class="o">==</span> <span class="kc">false</span><span class="o">){</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">userChoice</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"r"</span><span class="o">)){</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose rock \nThe computer chose paper \nYou lose!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose rock \nThe computer chose scissors \nYou win!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span><span class="o">{</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose rock \nThe computer chose rock \nIt's a tie!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-            <span class="o">}</span>
-            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">userChoice</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"p"</span><span class="o">)){</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose paper \nThe computer chose paper \nIt's a tie!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose paper \nThe computer chose scissors \nYou lose!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span><span class="o">{</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose paper \nThe computer chose rock \nYou win!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-
-            <span class="o">}</span>
-            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">userChoice</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"s"</span><span class="o">)){</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose scissors \nThe computer chose paper \nYou win!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">random</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose scissors \nThe computer chose scissors \nIt's a tie!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span><span class="o">{</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You chose scissors \nThe computer chose rock \nYou lose!"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-
-            <span class="o">}</span>
-            <span class="k">else</span><span class="o">{</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Invalid input, try again"</span><span class="o">);</span>
-                <span class="n">userChoice</span> <span class="o">=</span> <span class="n">scRPS</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
-            <span class="o">}</span>            
-        <span class="o">}</span>
-        <span class="n">scRPS</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
-    
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ticTacToe</span><span class="o">(){</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Tic Tac Toe"</span><span class="o">);</span>
-        <span class="nc">Scanner</span> <span class="n">scTTT</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
-        <span class="nc">String</span><span class="o">[]</span> <span class="n">board</span> <span class="o">=</span> <span class="o">{</span><span class="s">"1"</span><span class="o">,</span> <span class="s">"2"</span><span class="o">,</span> <span class="s">"3"</span><span class="o">,</span> <span class="s">"4"</span><span class="o">,</span> <span class="s">"5"</span><span class="o">,</span> <span class="s">"6"</span><span class="o">,</span> <span class="s">"7"</span><span class="o">,</span> <span class="s">"8"</span><span class="o">,</span> <span class="s">"9"</span><span class="o">};</span>
-        <span class="nc">String</span> <span class="n">player</span> <span class="o">=</span> <span class="s">"X"</span><span class="o">;</span>
-        <span class="nc">String</span> <span class="n">player2</span> <span class="o">=</span> <span class="s">"O"</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="nc">Boolean</span> <span class="n">quit</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Do you want to play against a friend or the computer?"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Type 1 for friend, 2 for computer"</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">choice</span> <span class="o">=</span> <span class="n">scTTT</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="c1">//make tic tac toe using player1 and player2</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">1</span><span class="o">){</span>                
-            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Type the number of the square you want to place your piece in"</span><span class="o">);</span>
-            <span class="k">while</span><span class="o">(</span><span class="n">quit</span> <span class="o">==</span> <span class="kc">false</span><span class="o">){</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1's turn (X)"</span><span class="o">);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">]);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">]);</span>
-                <span class="kt">int</span> <span class="n">move</span> <span class="o">=</span> <span class="n">scTTT</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">||</span> <span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"That square is already taken, try again"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span><span class="o">{</span>
-                    <span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">player</span><span class="o">;</span>
-                    <span class="n">turn</span><span class="o">++;</span>
-                    <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">turn</span> <span class="o">==</span> <span class="mi">9</span><span class="o">){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's a tie!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span><span class="o">{</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2's turn (O)"</span><span class="o">);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">]);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">]);</span>
-                        <span class="kt">int</span> <span class="n">move2</span> <span class="o">=</span> <span class="n">scTTT</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-                        <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">||</span> <span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"That square is already taken, try again"</span><span class="o">);</span>
-                        <span class="o">}</span>
-                        <span class="k">else</span><span class="o">{</span>
-                            <span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">player2</span><span class="o">;</span>
-                            <span class="n">turn</span><span class="o">++;</span>
-                            <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 2 wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                        <span class="o">}</span>
-                    <span class="o">}</span>
-                <span class="o">}</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">2</span><span class="o">){</span>
-            <span class="nc">String</span> <span class="n">computer</span> <span class="o">=</span> <span class="s">"O"</span><span class="o">;</span>
-            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Type the number of the square you want to place your piece in"</span><span class="o">);</span>
-            <span class="k">while</span><span class="o">(</span><span class="n">quit</span> <span class="o">==</span> <span class="kc">false</span><span class="o">){</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1's turn (X)"</span><span class="o">);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">]);</span>
-                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">]);</span>
-                <span class="kt">int</span> <span class="n">move</span> <span class="o">=</span> <span class="n">scTTT</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">||</span> <span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"That square is already taken, try again"</span><span class="o">);</span>
-                <span class="o">}</span>
-                <span class="k">else</span><span class="o">{</span>
-                    <span class="n">board</span><span class="o">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">player</span><span class="o">;</span>
-                    <span class="n">turn</span><span class="o">++;</span>
-                    <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Player 1 wins!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">turn</span> <span class="o">==</span> <span class="mi">9</span><span class="o">){</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's a tie!"</span><span class="o">);</span>
-                        <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                    <span class="o">}</span>
-                    <span class="k">else</span><span class="o">{</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer's turn (O)"</span><span class="o">);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">]);</span>
-                        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">+</span> <span class="s">" | "</span> <span class="o">+</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">]);</span>
-                        <span class="kt">int</span> <span class="n">move2</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">9</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
-                        <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"X"</span><span class="o">)</span> <span class="o">||</span> <span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"That square is already taken, try again"</span><span class="o">);</span>
-                        <span class="o">}</span>
-                        <span class="k">else</span><span class="o">{</span>
-                            <span class="n">board</span><span class="o">[</span><span class="n">move2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">computer</span><span class="o">;</span>
-                            <span class="n">turn</span><span class="o">++;</span>
-                            <span class="k">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">3</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">6</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">7</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">board</span><span class="o">[</span><span class="mi">2</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">5</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">board</span><span class="o">[</span><span class="mi">8</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">"O"</span><span class="o">)){</span>
-                                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Computer wins!"</span><span class="o">);</span>
-                                <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-                            <span class="o">}</span>
-                        <span class="o">}</span>
-                    <span class="o">}</span>
-                <span class="o">}</span>
-            <span class="o">}</span>
-          
-    <span class="o">}</span>
-        <span class="n">scTTT</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>  <span class="o">{</span>  
-        <span class="k">new</span> <span class="nf">ConsoleGame</span><span class="o">();</span> <span class="c1">// starting Menu object</span>
-    <span class="o">}</span>
-
-
-<span class="o">}</span>
-<span class="nc">ConsoleGame</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
-
-
-</code></pre></div></div>
+    <h1 id="console-games---rps-higher-lower-tic-tac-toe">Console Games - RPS, Higher Lower, Tic-Tac-Toe</h1>
+<p>Console games that show elements from College Board’s Units</p>
 
 <h2 id="hacks">Hacks</h2>
 <blockquote>
   <p>To start the year, I want you to consider a simple Java console game or improve on the games listed.</p>
   <ul>
-    <li>Make RPS, Tic-Tack-Toe, and Higher Lower into different objects.  Answer why you think this is important?</li>
-    <li>Simplify logic, particularly T-T-T.  What could you do to make this more simple? Java has HashMap (like Python Dictionary), Arrays (fixed size), ArraLists (Dynamic Size).</li>
+    <li>Make RPS, Tic-Tack-Toe, and Higher Lower into different objects.  Answer why you think this is important?: You can isolate the games from each other: each game object can have its own set of rules, logic, and methods. This makes it easier to maintain and change, because if you edit one game, it won’t affect another.</li>
+    <li>Simplify logic, particularly T-T-T.  What could you do to make this more simple? Java has HashMap (like Python Dictionary), Arrays (fixed size), ArraLists (Dynamic Size): 2D array to represent board - initialization to make empty board, update board, clear board, etc, player class for x and o, function to make a move, check win, check draw, and main game loop.</li>
     <li>Run the menu using recursion versus while loop.</li>
   </ul>
 </blockquote>
+
+<pre><code class="language-Java">import java.util.Random;
+import java.util.Scanner;
+
+public class RPSGame {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Rock Paper Scissors!");
+        System.out.println("Enter 'r' for rock, 'p' for paper, or 's' for scissors:");
+
+        Scanner scanner = new Scanner(System.in);
+        String userChoice = scanner.nextLine().toLowerCase();
+        scanner.close();
+
+        Random random = new Random();
+        int computerChoice = random.nextInt(3); // 0 for rock, 1 for paper, 2 for scissors
+
+        String[] choices = {"rock", "paper", "scissors"};
+        String userSelected = choices[userChoice.equals("r") ? 0 : userChoice.equals("p") ? 1 : 2];
+        String computerSelected = choices[computerChoice];
+
+        System.out.println("You chose " + userSelected);
+        System.out.println("The computer chose " + computerSelected);
+
+        if (userChoice.equals("r")) {
+            if (computerChoice == 1) {
+                System.out.println("You lose!");
+            } else if (computerChoice == 2) {
+                System.out.println("You win!");
+            } else {
+                System.out.println("It's a tie!");
+            }
+        } else if (userChoice.equals("p")) {
+            if (computerChoice == 1) {
+                System.out.println("It's a tie!");
+            } else if (computerChoice == 2) {
+                System.out.println("You lose!");
+            } else {
+                System.out.println("You win!");
+            }
+        } else if (userChoice.equals("s")) {
+            if (computerChoice == 1) {
+                System.out.println("You win!");
+            } else if (computerChoice == 2) {
+                System.out.println("It's a tie!");
+            } else {
+                System.out.println("You lose!");
+            }
+        } else {
+            System.out.println("Invalid input, try again.");
+        }
+    }
+}
+</code></pre>
+
+<pre><code class="language-Java">RPSGame.main(null)
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Rock Paper Scissors!
+Enter 'r' for rock, 'p' for paper, or 's' for scissors:
+p
+You chose paper
+The computer chose scissors
+You lose!
+</code></pre></div></div>
+
+<pre><code class="language-Java">import java.util.Random;
+import java.util.Scanner;
+
+public class HigherLowerGame {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Higher or Lower!");
+        System.out.println("I'm thinking of a number between 1 and 8.");
+        System.out.println("You have three guesses to get it right.");
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int answer = random.nextInt(8) + 1;
+
+        for (int remainingGuesses = 3; remainingGuesses &gt; 0; remainingGuesses--) {
+            System.out.print("Enter your guess: ");
+            int userGuess = scanner.nextInt();
+
+            if (userGuess == answer) {
+                System.out.println("Congratulations, you guessed it right!");
+                break;
+            } else if (userGuess &gt; answer) {
+                System.out.println("The number is lower.");
+            } else {
+                System.out.println("The number is higher.");
+            }
+
+            if (remainingGuesses &gt; 1) {
+                System.out.println("You have " + (remainingGuesses - 1) + " guesses remaining.");
+            } else {
+                System.out.println("You have no more guesses. The number was " + answer + ".");
+            }
+        }
+
+        System.out.println("Thanks for playing!");
+        scanner.close();
+    }
+}
+</code></pre>
+
+<pre><code class="language-Java">HigherLowerGame.main(null)
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Higher or Lower!
+I'm thinking of a number between 1 and 8.
+You have three guesses to get it right.
+Enter your guess: 4
+The number is lower.
+You have 2 guesses remaining.
+Enter your guess: 2
+The number is higher.
+You have 1 guesses remaining.
+Enter your guess: 3
+Congratulations, you guessed it right!
+Thanks for playing!
+</code></pre></div></div>
+
+<pre><code class="language-Java">import java.util.Random;
+import java.util.Scanner;
+
+public class TicTacToeGame {
+    private static final int BOARD_SIZE = 3;
+    private static final char EMPTY = ' ';
+    private static char[][] board = new char[BOARD_SIZE][BOARD_SIZE];
+    private static char currentPlayer = 'X';
+
+    public static void main(String[] args) {
+        initializeBoard();
+        playGame();
+    }
+
+    private static void initializeBoard() {
+        for (int row = 0; row &lt; BOARD_SIZE; row++) {
+            for (int col = 0; col &lt; BOARD_SIZE; col++) {
+                board[row][col] = EMPTY;
+            }
+        }
+    }
+
+    private static void printBoard() {
+        System.out.println("-------------");
+        for (int row = 0; row &lt; BOARD_SIZE; row++) {
+            System.out.print("| ");
+            for (int col = 0; col &lt; BOARD_SIZE; col++) {
+                System.out.print(board[row][col] + " | ");
+            }
+            System.out.println("\n-------------");
+        }
+    }
+
+    private static boolean isBoardFull() {
+        for (int row = 0; row &lt; BOARD_SIZE; row++) {
+            for (int col = 0; col &lt; BOARD_SIZE; col++) {
+                if (board[row][col] == EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private static boolean makeMove(int row, int col) {
+        if (row &lt; 0 || row &gt;= BOARD_SIZE || col &lt; 0 || col &gt;= BOARD_SIZE || board[row][col] != EMPTY) {
+            return false;
+        }
+        board[row][col] = currentPlayer;
+        return true;
+    }
+
+    private static boolean checkWin(char player) {
+    // Check rows
+    for (int row = 0; row &lt; BOARD_SIZE; row++) {
+        if (board[row][0] == player &amp;&amp; board[row][1] == player &amp;&amp; board[row][2] == player) {
+            return true;
+        }
+    }
+
+    // Check columns
+    for (int col = 0; col &lt; BOARD_SIZE; col++) {
+        if (board[0][col] == player &amp;&amp; board[1][col] == player &amp;&amp; board[2][col] == player) {
+            return true;
+        }
+    }
+
+    // Check diagonals
+    if ((board[0][0] == player &amp;&amp; board[1][1] == player &amp;&amp; board[2][2] == player) ||
+        (board[0][2] == player &amp;&amp; board[1][1] == player &amp;&amp; board[2][0] == player)) {
+        return true;
+    }
+
+    return false;
+}
+
+
+    private static void playGame() {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        boolean againstComputer = false;
+
+        System.out.println("Welcome to Tic-Tac-Toe!");
+        System.out.println("Do you want to play against a friend (1) or the computer (2)?");
+        int choice = scanner.nextInt();
+
+        if (choice == 2) {
+            againstComputer = true;
+        }
+
+        while (true) {
+            System.out.println("Current board:");
+            printBoard();
+            System.out.println("Player " + currentPlayer + ", enter row (0-2) and column (0-2) separated by space: ");
+
+            int row;
+            int col;
+
+            if (againstComputer &amp;&amp; currentPlayer == 'O') {
+                row = random.nextInt(3);
+                col = random.nextInt(3);
+            } else {
+                row = scanner.nextInt();
+                col = scanner.nextInt();
+            }
+
+            if (makeMove(row, col)) {
+                if (checkWin(currentPlayer)) {
+                    System.out.println("Player " + currentPlayer + " wins!");
+                    break;
+                } else if (isBoardFull()) {
+                    System.out.println("It's a tie!");
+                    break;
+                } else {
+                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+                }
+            } else {
+                System.out.println("Invalid move. Try again.");
+            }
+        }
+        scanner.close();
+    }
+}
+</code></pre>
+
+<pre><code class="language-Java">TicTacToeGame.main(null)
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Tic-Tac-Toe!
+Do you want to play against a friend (1) or the computer (2)?
+2
+Current board:
+-------------
+|   |   |   | 
+-------------
+|   |   |   | 
+-------------
+|   |   |   | 
+-------------
+Player X, enter row (0-2) and column (0-2) separated by space: 
+0 0
+Current board:
+-------------
+| X |   |   | 
+-------------
+|   |   |   | 
+-------------
+|   |   |   | 
+-------------
+Player O, enter row (0-2) and column (0-2) separated by space: 
+Current board:
+-------------
+| X |   | O | 
+-------------
+|   |   |   | 
+-------------
+|   |   |   | 
+-------------
+Player X, enter row (0-2) and column (0-2) separated by space: 
+2 2
+Current board:
+-------------
+| X |   | O | 
+-------------
+|   |   |   | 
+-------------
+|   |   | X | 
+-------------
+Player O, enter row (0-2) and column (0-2) separated by space: 
+Invalid move. Try again.
+Current board:
+-------------
+| X |   | O | 
+-------------
+|   |   |   | 
+-------------
+|   |   | X | 
+-------------
+Player O, enter row (0-2) and column (0-2) separated by space: 
+Current board:
+-------------
+| X | O | O | 
+-------------
+|   |   |   | 
+-------------
+|   |   | X | 
+-------------
+Player X, enter row (0-2) and column (0-2) separated by space: 
+2 0
+Current board:
+-------------
+| X | O | O | 
+-------------
+|   |   |   | 
+-------------
+| X |   | X | 
+-------------
+Player O, enter row (0-2) and column (0-2) separated by space: 
+Current board:
+-------------
+| X | O | O | 
+-------------
+|   |   |   | 
+-------------
+| X | O | X | 
+-------------
+Player X, enter row (0-2) and column (0-2) separated by space: 
+1 0
+Player X wins!
+</code></pre></div></div>
+
 
   </div><a class="u-url" href="/studentAliya/c3.1/c4.6/2023/08/23/java-console_games_IPYNB_2_.html" hidden></a>
 </article>
