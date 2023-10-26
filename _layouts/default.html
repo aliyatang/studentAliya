@@ -10,13 +10,17 @@
       {%- include header.html -%}
     </header>
 
-
-    <section>
+    <section class="main-content">
       {{ content }}
     </section>
 
+    <section class="info-box">
+      <h2>{{ site.title }}</h2>
+      <p>{{ site.description }}</p>
+      <p>Owner: {{ site.owner_name }}</p>
+      <!-- You can add other content here if needed -->
+    </section>
   </div>
 </body>
-
 
 </html>
