@@ -3,7 +3,7 @@ description: "APCSA Blog, AP Test Prep, and more!"
 owner_name: Aliya Tang
 github_username: aliya.tang
 baseurl: "/studentAliya"
-# remote_theme: pages-themes/midnight@v0.2.0
+#remote_theme: pages-themes/midnight@v0.2.0
 remote_theme: pages-themes/dinky@v0.2.0
 #remote_theme: pages-themes/minimal@v0.2.0
 #remote_theme: pages-themes/hacker@v0.2.0
