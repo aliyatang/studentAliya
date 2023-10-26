@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 
 {%- include head.html -%}
 
@@ -7,6 +7,8 @@
 
   <div class="wrapper">
     <header>
+      <h2>Aliya Tang APCSA</h2>
+      <p>CS Blog, AP Test Prep, and more</p>
       {%- include header.html -%}
     </header>
 
@@ -14,12 +16,6 @@
       {{ content }}
     </section>
 
-    <section class="info-box">
-      <h2>{{ site.title }}</h2>
-      <p>{{ site.description }}</p>
-      <p>Owner: {{ site.owner_name }}</p>
-      <!-- You can add other content here if needed -->
-    </section>
   </div>
 </body>
 
