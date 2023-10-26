@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>U3 Boolean Logic | Aliya Tang APCSA</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="U3 Boolean Logic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lesson on boolean logics!" />
+<meta property="og:description" content="Lesson on boolean logics!" />
+<link rel="canonical" href="http://localhost:4000/studentAliya/2023/09/19/binarylogic.html" />
+<meta property="og:url" content="http://localhost:4000/studentAliya/2023/09/19/binarylogic.html" />
+<meta property="og:site_name" content="Aliya Tang APCSA" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-19T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="U3 Boolean Logic" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/studentAliya/2023/09/19/binarylogic.html","headline":"U3 Boolean Logic","dateModified":"2023-09-19T00:00:00-07:00","datePublished":"2023-09-19T00:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studentAliya/2023/09/19/binarylogic.html"},"description":"Lesson on boolean logics!","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/studentAliya/assets/css/style.css?v=9757ad1e2b16a9231ab01f7e087c492d3a8cdb83">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/studentAliya/assets/js/scale.fix.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/studentAliya/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/studentAliya/">Home</a></li>
+        <li class="fork"><a href="/studentAliya/csa">CSA Lab Notebook</a></li>
+        <li class="fork"><a href="/studentAliya/blogs">Blogs</a></li>
+        <li class="title"><a href="https://github.com/aliyatang/studentAliya#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="data-tables">Data Tables!</h1>
+
+<p>Truth tables are used to easily describe boolean algebra operations. Boolean algebra is an branch of mathematics dealing with, rather than the vast stretches of integers, two digits: <strong>1</strong> and <strong>0</strong> (or <code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">false</code>).</p>
+
+<p>There are many different types of boolean operations, and we’ll be covering them all here. We also have an interactive quiz that allows you to see how good you are at this!</p>
+
+<h2 id="not-and-states">NOT (and states).</h2>
+
+<h3 id="boolean-states">Boolean states</h3>
+<p>As you may know, binary and boolean states are very simple, 1 and 0, true and false. Boolean operations occur based off the comparison of two binary values, or inversion. Thus, these two boolean states are imperative to understanding. 1 and 0 are inverses, like on to off. They are also mutually exclusive. You can’t have a state that’s both on and off at the same time!</p>
+
+<h3 id="not">NOT</h3>
+
+<p>The <strong>NOT</strong> operator inverses whatever it is affecting.</p>
+
+<p>The most basic operation is one that does</p>
+
+<p><strong>Question: What NOT(true)</strong>
+false</p>
+
+<h2 id="operations-and">Operation(s): <strong>AND</strong></h2>
+
+<h3 id="and">AND</h3>
+
+<p>AND is a boolean operation that you see in your everyday life! And in english is a conjugation, which denotes a combination of two or more objects, and in programming <em>and</em> binary math, it is very similar.</p>
+
+<p>For Example, in English you’d say:
+<code class="language-plaintext highlighter-rouge">Take this and that</code>
+and you would not be fulfilling the request unless both <code class="language-plaintext highlighter-rouge">this</code> and <code class="language-plaintext highlighter-rouge">that</code> were taken.</p>
+
+<p>Similarly, in Binary math, when you use the and operator, you are only considering the output true unless both are true.</p>
+
+<p><strong>AND: (XY)</strong><br />
+python: <code class="language-plaintext highlighter-rouge">True and False</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">true &amp;&amp; false</code><br />
+java: <code class="language-plaintext highlighter-rouge">true &amp;&amp; false</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+</table>
+
+<h3 id="nand">NAND</h3>
+
+<p><strong>NAND</strong> is the not operator for and. In other words, it is the complete inverse of the AND function.</p>
+
+<p>In english this would be: <code class="language-plaintext highlighter-rouge">DON'T take this and that</code>. Note how the <code class="language-plaintext highlighter-rouge">DON'T</code> is a negative, asking you not to take both, but to take either.</p>
+
+<p>In binary this would be:</p>
+
+<p><strong>NAND: (XY)’</strong> <br />
+(X*Y represents AND),(The <code class="language-plaintext highlighter-rouge">'</code> denotes inverse)
+python: <code class="language-plaintext highlighter-rouge">not (True and False)</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">!(true &amp;&amp; false)</code><br />
+java: <code class="language-plaintext highlighter-rouge">!(true &amp;&amp; false)</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+</table>
+
+<h3 id="inhibition">Inhibition</h3>
+
+<p><strong>Inhibition</strong> is a pseudo-and (not actual jargon) function. Written in plain-text, the Inhibition function can be two things: <em>X·NOT(Y)</em> or <em>NOT(X)·Y</em>. It is when one input is True, but the other is False. This is the inverse of either X or Y, but not both. It can be written as X or Y Inhibition.</p>
+
+<p><strong>Inbiting X: (X’Y)</strong><br />
+python: <code class="language-plaintext highlighter-rouge">(Not X)&amp;Y</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">!(X)&amp;&amp;Y</code><br />
+java: <code class="language-plaintext highlighter-rouge">!(X)&amp;&amp;Y</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+</table>
+
+<p><strong>Inbiting Y: (XY’)</strong><br />
+python: <code class="language-plaintext highlighter-rouge">X&amp;(Not Y)</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">X&amp;&amp;!(Y)</code><br />
+java: <code class="language-plaintext highlighter-rouge">X&amp;&amp;!(Y)</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+</table>
+
+<p>Note how the first and second terms (in their respective inhibitions) are inverted.</p>
+
+<p><strong>Question: What would (1)(0) be? What about (1)(0)’? What about true&amp;&amp;false?</strong>
+(1)(0) would be false. (1)(0)’ would be inverse, so true. true&amp;&amp;false would be false.</p>
+
+<h2 id="operations-or">Operation(s): OR</h2>
+
+<p><strong>AND</strong> operations require both arguments in the function to be true in order to return true. However, or operations only require one to be true to return true. <strong>OR</strong> gates being more forgiving makes them great to check for different cases that AND simply cannot take. However, there are many variations that allow for greater specificity.</p>
+
+<h3 id="or">OR</h3>
+
+<p>English Example: <code class="language-plaintext highlighter-rouge">Take either this or that</code>. Here, if you take <code class="language-plaintext highlighter-rouge">this</code>, you fulfill the request. But if you also took <code class="language-plaintext highlighter-rouge">that</code>, you would also fulfill the request. In fact, if you took <em>both</em>, you’d actually be fulfilling the request, because they didn’t specify to not take both.</p>
+
+<p>Translated to binary, this is:
+<strong>OR: (X + Y)</strong><br />
+python: <code class="language-plaintext highlighter-rouge">True or False</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">true || false</code><br />
+java: <code class="language-plaintext highlighter-rouge">true || false</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+</table>
+
+<h3 id="nor">NOR</h3>
+
+<p>Remember NAND? This is NAND, but for or. It takes the complete output of OR, and takes the inverse of it.</p>
+
+<p><strong>NOR: (X + Y)’</strong><br />
+python: <code class="language-plaintext highlighter-rouge">not (True or False)</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">!(true || false)</code><br />
+java: <code class="language-plaintext highlighter-rouge">!(true || false)</code></p>
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>True</td>
+  </tr>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Question: What would 1+0 be? What about !(true</td>
+      <td> </td>
+      <td>false)**</td>
+    </tr>
+    <tr>
+      <td>1+0 would be true. It means 1 OR 0, and at least one is true between the two so it is true. !(true</td>
+      <td> </td>
+      <td>false) would just be the inverse, so false.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="xor">XOR</h3>
+
+<p><strong>XOR</strong>, eXclusive OR, <em>or</em> bitwise OR allows for a coder to only return true if specifically only one input is true, but the other input is false. For example, this would be a situation where, if you have two objects, you can only take one or the other, not both, and not none.</p>
+
+<p><strong>XOR: (X^Y)</strong><br />
+python: <code class="language-plaintext highlighter-rouge">True^False</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">true^false</code><br />
+java: <code class="language-plaintext highlighter-rouge">true^false</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr> 
+</table>
+
+<h3 id="xnor">XNOR</h3>
+<p>XNOR is the Exclusive NOR. This is the direct inverse of the XOR function, so it would be pretty simple.</p>
+
+<p><strong>XNOR: (X^Y)’</strong><br />
+python: <code class="language-plaintext highlighter-rouge">not (True^False)</code><br />
+javascript: <code class="language-plaintext highlighter-rouge">!(true^false)</code><br />
+java: <code class="language-plaintext highlighter-rouge">!(true^false)</code></p>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th> 
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>TRUE</td> 
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>TRUE</td>
+    <td>FALSE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>TRUE</td> 
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>FALSE</td>
+    <td>FALSE</td> 
+    <td>TRUE</td>
+  </tr>
+</table>
+
+<p><strong>Question: what would true^false be? what would !(false^false) be?</strong>
+ture^false is (true XOR false), since only only of them is true, then it’s true. !(false^false) is !(false xor false), and since both of them are false (not one is true) then the inside is false, then the ! makes it true.</p>
+
+<h2 id="pemdasnao">PEMDASNAO</h2>
+<ol>
+  <li>Parenthesis</li>
+  <li>Exponents</li>
+  <li>Mutliplication/Divsion</li>
+  <li>Addition/Subtraction</li>
+  <li>NOT</li>
+  <li>AND</li>
+  <li>OR
+<strong>IN THIS ORDER</strong></li>
+</ol>
+
+<h2 id="de-morgans-law">De Morgan’s Law</h2>
+<p><img src="/studentAliya/images/booleanalgebralaws.png" width="800" height="450" /></p>
+
+<p>Above is an image of the important boolean algebra laws that are necessary to know. Not memorize, but know. The most important one we will cover is De Morgan’s law. Mainly because it is the most complex. As per wikipedia:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The rules can be expressed in English as:
+
+- The negation of a disjunction is the conjunction of the negations
+- The negation of a conjunction is the disjunction of the negations
+</code></pre></div></div>
+
+<p>Notice how it the conjunction references AND and disjunction represents OR. Thus, this can be restated as…</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- NOT (A OR B) is equivalent to (NOT A) AND (NOT B)
+- NOT (A AND B) is equivalent to (NOT A) OR (NOT B)
+</code></pre></div></div>
+<p>This is very useful when evaluating boolean expressions.</p>
+
+<h1 id="hacks">Hacks</h1>
+
+<p>Complete the weird questions below.</p>
+<h3 id="weird-questions">Weird questions</h3>
+<ol>
+  <li>!(true)&amp;&amp;(false) = ? what in boolean values?</li>
+</ol>
+
+<p>NOT first. !(true) is false. So now it is (false)&amp;(false). This is false.</p>
+
+<ol>
+  <li>not ((((true and not (false)) ^ false) ^ true) &amp;&amp; false) (remember PEMDASNAO!)</li>
+</ol>
+
+<p>First step is most inner parenthesis: (true and not (false)). Within this do the not first, so it becomes true and true, which is true. Now the next layer of parenthesis is (true ^ false). Since only one is true in this XOR, then it is true. Now, (true ^ true). Since both are true in this XOR, then it is false. Now, (false &amp;&amp; false), which is false. Finally, not (false) is true.</p>
+
+<ol>
+  <li>Prove the following: !A * !(B + !C) = !A * (!B * !C)</li>
+</ol>
+
+<p>First part: !A * !(B + !C) = !A * !B * !(!C) = !A * !B * C
+Second part: !A * (!B * !C) = !A * !B * !C</p>
+
+<p>NOT EQUAL</p>
+
+<ol>
+  <li>420 &amp;&amp; 66 (Hint, convert to binary, then perform the operation)
+    <ol>
+      <li>If you got this one, try 89 OR 42</li>
+    </ol>
+  </li>
+</ol>
+
+<p>420 110100100. 66 is 1000010.</p>
+
+<p>Line up and use AND between each digit.</p>
+
+<p>110100100
+001000010
+———
+000000000</p>
+
+<p>89 is 1011001. 42 is 101010.</p>
+
+<p>Line up and use OR between each digit.</p>
+
+<p>1011001
+0101010
+——-
+1111011</p>
+
+<p>For each example, you can use code, but then show your work and how you got it. Please ask questions if you are confused!</p>
+
+
+  </div><a class="u-url" href="/studentAliya/2023/09/19/binarylogic.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
